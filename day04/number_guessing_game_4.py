@@ -25,6 +25,8 @@ while True:
             break
         elif guess < secret_number:
             print("Your guess is smaller than the secret number. Try again.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 20, or a command ('x', 's', 'd').")
         else:
             print("Your guess is bigger than the secret number. Try again.")
    
