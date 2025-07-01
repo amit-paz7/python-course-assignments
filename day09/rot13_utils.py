@@ -1,4 +1,22 @@
 def apply_rot13(text):
+    """
+    Applies the ROT13 cipher to a string.
+
+    This function rotates each letter by 13 places in the alphabet
+    while leaving non-alphabetic characters unchanged.
+
+    >>> apply_rot13('Hello, World!')
+    'Uryyb, Jbeyq!'
+
+    >>> apply_rot13('Python is fun.')
+    'Clguba vf sha.'
+
+    >>> apply_rot13('123')
+    '123'
+
+    >>> apply_rot13(apply_rot13('Double check'))
+    'Double check'
+    """
     result = []
     for char in text:
         char_code = ord(char)
@@ -13,6 +31,5 @@ def apply_rot13(text):
 
 if __name__ == '__main__':
     import doctest
-
     doctest.testmod()
     print("Doctests completed.")
